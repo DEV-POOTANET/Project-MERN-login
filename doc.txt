@@ -1,0 +1,10 @@
+******server*****
+npm init -y
+
+npm install express body-parser mongoose cors morgan bcryptjs jsonwebtoken nodemon dotenv
+	***express
+	***body-parser รับส่งข้อมูล clien มา server
+	*** cors จัดกาาร API
+	***dotenv เก็บข้อมูลสำคัญ
+	***nodemon รันอัตโนมัต
+npm start
