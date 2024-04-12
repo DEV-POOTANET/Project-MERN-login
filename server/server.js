@@ -9,7 +9,7 @@ const connectDB =       require('./config/db')
 const app = express();
 
 // connectDB
-connectDB()
+connectDB() 
 
 //middleware
 app.use(morgan('dev'))
