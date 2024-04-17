@@ -8,3 +8,10 @@ npm install express body-parser mongoose cors morgan bcryptjs jsonwebtoken nodem
 	***dotenv เก็บข้อมูลสำคัญ
 	***nodemon รันอัตโนมัต
 npm start
+
+
+******client*****
+
+1. npx create-react-app client
+2. cd client
+3. npm install axios react-router-dom redux react-redux redux-devtools-extension react-toastify moment react-moment
