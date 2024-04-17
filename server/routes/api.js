@@ -9,6 +9,9 @@ const { register,
         deleteUser
 } = require('../Controller/auth')
 
+// middlware
+const { auth } = require('../middleware/auth')
+
 // Enpoint http://localhost:9090/api/register
 // Method POST 
 // Access publish
@@ -18,6 +21,11 @@ router.post('/register',register)
 // Method POST 
 // Access publish
 router.post('/login',login)
+
+// Enpoint http://localhost:9090/api/1
+router.get('/1',auth,(req,res)=>{
+    res.send('hello dev')
+})
 
 // Enpoint http://localhost:9090/api/auth
 // Method Get 
