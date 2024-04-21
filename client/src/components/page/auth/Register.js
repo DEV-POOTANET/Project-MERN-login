@@ -38,6 +38,7 @@ const Register = () => {
 
   return (
     <div>
+      <h1>Register page</h1>
       <form onSubmit={handleSubmit}>
 
         <label>Username</label>
