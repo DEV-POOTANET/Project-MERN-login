@@ -6,7 +6,8 @@ const { register,
         login,
         listUser,
         editUser,
-        deleteUser
+        deleteUser,
+        currentUser
 } = require('../Controller/auth')
 
 // middlware
@@ -22,15 +23,14 @@ router.post('/register',register)
 // Access publish
 router.post('/login',login)
 
-// Enpoint http://localhost:9090/api/1
-router.get('/1',auth,(req,res)=>{
-    res.send('hello dev')
-})
+// Enpoint http://localhost:9090/api/current-user
+// Method POST 
+// Access privatte
+router.post('/current-user',auth,currentUser)
 
 // Enpoint http://localhost:9090/api/auth
 // Method Get 
 // Access publish
-
 router.get('/auth',listUser)
 
 // Enpoint http://localhost:9090/api/auth

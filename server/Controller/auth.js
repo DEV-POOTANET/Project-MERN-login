@@ -65,6 +65,21 @@ exports.login = async(req,res) =>{
     }
 }
 
+exports.currentUser = async(req,res)=>{
+    try{
+        // model User
+        console.log('controller',req.user)
+        const user = await User.findOne({ username : req.user.username })
+        .select('-password').exec();
+        res.send(user)
+        //console.log('user',user)
+
+    }catch(err){
+        console.log(err)
+        res.status(500).send("server error !");
+    }
+}
+
 exports.listUser = async(req,res)=>{
     try{        
         res.send('list Get User')

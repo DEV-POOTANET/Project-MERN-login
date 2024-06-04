@@ -15,3 +15,8 @@ npm start
 1. npx create-react-app client
 2. cd client
 3. npm install axios react-router-dom redux react-redux redux-devtools-extension react-toastify moment react-moment
+
+***************************
+git add .
+git commit -m ""
+git push -u origin main

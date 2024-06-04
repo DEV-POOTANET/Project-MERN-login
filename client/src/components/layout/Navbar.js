@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { LoginOutlined,  } from '@ant-design/icons';
 import { Menu } from 'antd';
+// redux
+import { useDispatch } from "react-redux"
+import { Link , useNavigate } from 'react-router-dom'
 
-import { Link } from 'react-router-dom'
+
 const items = [
     {
       label: 'Login',
@@ -16,9 +19,11 @@ const items = [
     //   icon: <AppstoreOutlined />,
       to: '/register'
     },
+    
   ];
 
 const Navbar = () => {
+  
     const [current, setCurrent] = useState('login');
     const onClick = (e) => {
       console.log('click ', e);

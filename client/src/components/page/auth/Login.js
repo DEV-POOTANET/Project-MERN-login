@@ -34,11 +34,11 @@ function Login() {
   
   const handleSubmit =(e) =>{
     e.preventDefault()
-    console.log(value)
+    //console.log(value)
 
       login(value)
       .then(res =>{
-        console.log(res)
+        //console.log(res)
         alert(res.data)
 
         dispatch({
