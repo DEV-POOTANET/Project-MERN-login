@@ -3,7 +3,8 @@ export function useReducer(state = null , action){
         case 'LOGIN':
             return action.payload
         case 'LOGOUT':
-            return '555 logout'
+            localStorage.clear()
+            return action.payload
         default:
             return state;
     }

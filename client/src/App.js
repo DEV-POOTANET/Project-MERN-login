@@ -16,6 +16,9 @@ import { useDispatch } from "react-redux"
 
 import { Routes,Route } from "react-router-dom";
 
+// Routes
+import UserRoute from "./components/routes/UserRoute"; 
+
 function App() {
   const dispatch = useDispatch();
   const idtoken = localStorage.token;
@@ -48,7 +51,12 @@ function App() {
         <Route path="/login" element={<Login/>}/>
 
         <Route path="/admin/index" element={<HomeAdmin/>}/>
-        <Route path="/user/index" element={<HomeUser/>}/>
+        <Route path="/user/index" element={
+          <UserRoute>
+            <HomeUser/>
+          </UserRoute>
+        }
+        />
 
 
       </Routes>
