@@ -11,13 +11,15 @@ import HomeUser from "./components/page/user/Home"
 import Navbar from "./components/layout/Navbar";
 // function 
 import { currentUser } from "./components/function/auth";
-// redux
+// redux          
 import { useDispatch } from "react-redux"
 
 import { Routes,Route } from "react-router-dom";
 
 // Routes
 import UserRoute from "./components/routes/UserRoute"; 
+import AdminRouth from "./components/routes/AdminRouth"; 
+
 
 function App() {
   const dispatch = useDispatch();
@@ -50,13 +52,18 @@ function App() {
         <Route path="/register" element={<Register/>}/>
         <Route path="/login" element={<Login/>}/>
 
-        <Route path="/admin/index" element={<HomeAdmin/>}/>
+        <Route path="/admin/index" element={
+          <AdminRouth>
+          <HomeAdmin/>
+          </AdminRouth>
+        }/>
+
+
         <Route path="/user/index" element={
           <UserRoute>
             <HomeUser/>
           </UserRoute>
-        }
-        />
+        }/>
 
 
       </Routes>

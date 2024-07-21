@@ -12,6 +12,7 @@ const { register,
 
 // middlware
 const { auth } = require('../middleware/auth')
+const { adminCheck } = require('../middleware/auth')
 
 // Enpoint http://localhost:9090/api/register
 // Method POST 
@@ -27,6 +28,11 @@ router.post('/login',login)
 // Method POST 
 // Access privatte
 router.post('/current-user',auth,currentUser)
+
+// Enpoint http://localhost:9090/api/current-admin
+// Method POST 
+// Access privatte
+router.post('/current-admin',auth,adminCheck,currentUser)
 
 // Enpoint http://localhost:9090/api/auth
 // Method Get 
