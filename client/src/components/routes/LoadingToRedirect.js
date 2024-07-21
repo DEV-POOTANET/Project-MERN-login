@@ -1,26 +1,24 @@
-import React,{useState,useEffect} from 'react'
-import { useNavigate } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const LoadingToRedirect = () => {
-    const [ count , setcount] = useState(3)
-    const navigate =useNavigate()
+  const [count, setCount] = useState(3);
+  const navigate = useNavigate();
 
-    useEffect(() =>{
-        const interval = setInterval(()=>{
-            setcount((currentCount) => -- currentCount)
-        },1000)
-        // redirect
-        count === 0 && navigate('/')
-
-        return () => clearInterval(interval)
-
-    },[count])
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCount((currentCount) => --currentCount);
+    }, 1000);
+    if (count === 0) navigate('/');
+    
+    return () => clearInterval(interval);
+  }, [count, navigate]);
 
   return (
     <div>
-        <h1>No Permission , redirect in {count}</h1>
+      <h1>No Permission, redirect in {count} seconds</h1>
     </div>
-  )
-}
+  );
+};
 
-export default LoadingToRedirect
+export default LoadingToRedirect;

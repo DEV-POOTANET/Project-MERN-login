@@ -14,6 +14,7 @@ const Navbar = () => {
           type: 'LOGOUT',
           payload: null,
         });
+        localStorage.removeItem('token');
         navigate('/');
     };
 
