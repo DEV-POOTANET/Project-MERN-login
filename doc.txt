@@ -23,3 +23,6 @@ git push -u origin main
 
 
 +++++++++++++++++++++++++++++++
+
+npm install bootstrap 
+import 'bootstrap/dist/css/bootstrap.min.css'   =====> index.js

@@ -8,6 +8,7 @@ import Login from "./components/page/auth/Login";
 import Home from "./components/page/Home";
 // Admin components
 import HomeAdmin from "./components/page/admin/Home";
+import ManageAdmin from "./components/page/admin/ManageAdmin";
 // User components
 import HomeUser from "./components/page/user/Home";
 // Layout components
@@ -49,22 +50,30 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+
         <Route
           path="/admin/index"
           element={
             <AdminRoute>
               <HomeAdmin />
             </AdminRoute>
-          }
-        />
+          }/>
+        <Route
+          path="/admin/manage-admin"
+          element={
+            <AdminRoute>
+              <ManageAdmin />
+            </AdminRoute>
+          }/>
+
         <Route
           path="/user/index"
           element={
             <UserRoute>
               <HomeUser />
             </UserRoute>
-          }
-        />
+          }/>
+          
       </Routes>
     </div>
   );

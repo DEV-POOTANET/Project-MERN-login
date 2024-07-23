@@ -1,11 +1,18 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 const MenubarAdmin = () => {
   return (
     <div>
         <ul className='nav flex-column'>
-            <li className='nav-item'>แดชบอร์ด </li>
-            <li className='nav-item'>จัดการผู้ใช้งาน</li>
+
+            <li className='nav-item'> 
+              <Link to="/admin/index">แดชบอร์ด</Link> 
+            </li>
+
+            <li className='nav-item'> 
+              <Link to="/admin/manage-admin">จัดการผู้ใช้งาน</Link>
+            </li>
+
         </ul>
     </div>
   )
